@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Update(){
     const [firstName, setFirstName] = useState("")
@@ -71,9 +72,11 @@ export default function Update(){
                     </div>
                 </div>
             </form>
-            <div className="col-md-12">
-                    <button type="submit" className="btn btn-success my-3" onClick={sendDataToAPI}>Update</button>
-            </div>
+            <Link to={"/get"}>
+                <div className="col-md-12">
+                        <button type="submit" className="btn btn-success my-3" onClick={sendDataToAPI}>Update</button>
+                </div>
+            </Link>
         </div>
     )
 }

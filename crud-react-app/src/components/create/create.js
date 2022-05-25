@@ -30,11 +30,9 @@ export default function Create(){
     
     return (
         <div>
-            <Link to='/get'>
-                <button className="btn btn-success" >
-                    Back
-                </button>
-            </Link>
+            <div class="col-md-12">
+                <h2>Add new student</h2>
+            </div>
             <form action="" >
                 <div className="row mt-5">
                     <div className="col-md-12">
@@ -76,9 +74,11 @@ export default function Create(){
                     </div>
                 </div>
             </form>
-            <div className="col-md-12">
-                    <button type="submit" className="btn btn-success my-3" onClick={sendDataToAPI}>Submit</button>
-            </div>
+            <Link to="/get">
+                <div className="col-md-12">
+                        <button type="submit" className="btn btn-success my-3" onClick={sendDataToAPI}>Submit</button>
+                </div>
+            </Link>
         </div>
     )
 }
